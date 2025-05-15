@@ -14,14 +14,14 @@ También puedes compartir cosas con otros usuarios, crear carpetas, y dar permis
 
 ## Problemas encontrados
 
-Durante la realización de esta práctica se encontraron los siguientes desafíos:
-
 Durante la instalación, después de descomprimir el fichero, tuve que buscar el nombre del directorio donde se había descomprimido el archivo, porque pensaba que era el mismo nombre. Al copiarlo en la carpeta `/var/www/html`, me aparecía el siguiente error:
 
 ![Descripción de la imagen](https://drive.google.com/uc?export=view&id=14TAidtZTlTtWl5VEzJPklVWx8wQlcm44)
 
 
 Luego cambié el nombre, volví a ejecutar el mismo comando con el nombre correcto, y ya pude continuar con la instalación sin problemas.
+
+En la configuración, cuando se tiene que hacer el acceso remoto, tuve problemas al hacerlo, le pedi ayuda a mi profesor y me ayudo a realizar ese paso.
 
 
 ---
