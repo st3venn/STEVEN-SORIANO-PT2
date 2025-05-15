@@ -48,7 +48,7 @@ Instalamos los requisitos previos de PPA (Personal package archive).
 
 ![imagen8](https://drive.google.com/uc?export=view&id=1TOaGUCSUPDJ-7ia_p0i-rNqE7wgCjIB9)
 
--Instalamos las herramientas para poder trabajar en los archivos PPA con: 
+- Instalamos las herramientas para poder trabajar en los archivos PPA con: 
 ```bash
 LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php -y
 ```
