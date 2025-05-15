@@ -1,10 +1,10 @@
 # STEVEN-SORIANO-PT2
 Este es mi repositorio. El contenido que hay aquí trata sobre la instalación y configuración de **ownCloud** en la máquina virtual de **IsardVDI**.
 
-A continuación, tenéis dos manuales: uno es de la instalación de ownCloud y el siguiente es de la configuración, una vez ya instalado:
+A continuación, tenéis dos manuales: uno es de la instalación de ownCloud y el siguiente es de la configuración una vez ya instalado:
 
-- **Manual de Instalación** (`INSTALLATION.md`): (link)  
-- **Manual de Configuración** (`CONFIGURATION.md`): (link)
+- **Manual de Instalación** : INSTALLATION.md 
+- **Manual de Configuración**: CONFIGURATION.md
 
 ## Descripción del proyecto
 
