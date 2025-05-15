@@ -192,8 +192,20 @@ ip a
 Vemos la IP de la red.
 ![imagen 97](https://drive.google.com/uc?export=view&id=1U5gHeaENqyhFFJkxyfGf3ZDn8iT_ruy1)
 
-- Luego desde la maquina local, volvemos a realizar el mismo comando para ver si esta la misma `IP que la maquina virtual`.
-- 
+- Luego desde la maquina local, volvemos a realizar el mismo comando para ver si esta la misma `IP que la maquina virtual`. Como no salia la misma `dirección IP` comprobamos hacer ping con la `IP` de la maquina virtual.
+![imagen 98](https://drive.google.com/uc?export=view&id=1bYFBJwQlU8Mvmfgn6kqdVt2g3u8Rk3Ow)
+
+- Como el ping si funciona, abrimos el archivo donde esta la configuración y los dominios. En el apartado de `trusted_domains`, tiene que salir `0=> 'localhost'`, debajo de ello, pondremos `1=> '192.168.0.0'` según la **IP** que te haya tocado. En mi caso puse `1=>'192.168.236.251'`.
+![imagen 99](https://drive.google.com/uc?export=view&id=1E3JRZUA728yaqHs2hVPSxqXNyQzTWOKz)
+
+- Una vez echo lo anterior, nos dirigmos al navegador de la maquina local y ponemos `http://192.168.0.0`.
+![imagen 100](https://drive.google.com/uc?export=view&id=1vai_wuzXnG_e5aXgOn12_6_2L6JIQar-)
+
+Y finalmente puedes acceder a ownCloud desde la maquina local.
+
+
+
+
 
 
 
