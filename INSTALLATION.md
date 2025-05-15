@@ -32,8 +32,10 @@ Una vez creada la máquina virtual, empezamos a usar la terminal para instalar y
 Primero descargamos el `.zip` de ownCloud y le cambiamos el nombre.
 
 [Descargar ownCloud](https://download.owncloud.com/server/stable/owncloud-complete-20240724.zip)
+![imagenFICHERO](https://drive.google.com/uc?export=view&id=1QQKW656DEQckMXGriP4dX_92vVKFv1qD)
+Yo he puesto ese nombre, pero tu lo puedes poner como quieras, solo que recuerda el nombre cambiado.
 
--Abrimos la terminal:
+- Abrimos la terminal:
 
 ![imagen7](https://drive.google.com/uc?id=1OakKsgq2v1pcux-0wyJ-Gh75d2IlSdKu)
 
@@ -162,19 +164,94 @@ CREATE DATABASE bbdd;
 ```
 ![imagen29](https://drive.google.com/uc?export=view&id=1l9jcpKJ0-45mHw3O_gxg2KnFG1gHg1RK)
 
--Creamos el usuario que se mostrara en ownCloud:
+-Creamos el usuario que se mostrara en ownCloud y le damos privilegios:
 ```console
 CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 Puedes cambiar `usuario` por tu nombre real o tu apodo, pero ten en cuenta que todo lo tendras que poner con el nuevo nombre.
+![imagen30](https://drive.google.com/uc?export=view&id=1Ly8FmY90tIoNrlZbE8qjUEi4inZ5zVbn)
+```bash
+GRANT ALL ON bbdd.* to 'usuario'@'localhost';
+```
+![imagen31](https://drive.google.com/uc?export=view&id=1LBPqIvB86li-pGmt5JZls47KZUM0dzlw)
 
+- Y finalmente salimos de la base de datos.
+```bash
+exit
+```
+- Ahora con:
+```bash
+mysql -u usuario -p
+```
+probamos la conexión con la base de datos.
+![imagen32](https://drive.google.com/uc?export=view&id=1R1j1n1s_6pRTWQ4P1YDO_SzAJGF3kDcI)
 
+- Ahora descargaremos los ficheros con los siguientes comandos:
+```bash
+sudo cp ~/Descargas/app-web.zip /var/www/html
+```
+![imagen33](https://drive.google.com/uc?export=view&id=1PmZnFYU_Bkg9ZLR8K0BXRkOrgPprTZbG)
+En mi caso, como tengo el sistema en Español, pongo `Descargas`, que es donde tengo guardado el fichero, si has cambiado el nombre del fichero tambien lo deberias cambiar en este comando.
 
+- Nos dirigmos al directorio `/ver/www/html` con:
+```bash
+cd /var/www/html
+```
+![imagen35](https://drive.google.com/uc?export=view&id=1kmDXqZR0M6OLyEsxvjGHW3hlmVhJQgMl)
 
+- Una vez dentro del directorio `/var/www/html` descomprimimos el fichero con el siguiente comando:
+```console
+sudo unzip app-web.zip
+```
+![imagen36](https://drive.google.com/uc?export=view&id=1gkTt7NJhjRIzD9T0bwCIitvBNQqMehiX)
+![imagen37](https://drive.google.com/uc?export=view&id=1V8eydB7sEAjgU3S_AmF0x3FMQnTQQQ_B)
 
+- Ahora con:
+```bash
+ls /var/www/html
+```
+Podemos mirar que nombre se ha puesto despues de descomprimir el fichero.
+![imagen38](https://drive.google.com/uc?export=view&id=111B4aNXrSDIUp5v7q5ys34vR1a1gDs1u)
 
+- Una vez mirado el nuevo nombre (en mi caso **owncloud**), podemos copiar todos los fichero al directorio `/var/www/html` con:
+```bash
+sudo cp -R owncloud/. /var/www/html
+```
+![imagen39](https://drive.google.com/uc?export=view&id=1XON6lkjgiTOTqJUmuhUHaJFl-jmwMnl2)
 
+- Una vez hecho el `unzip`, eliminamos la carpeta que hemos creado:
+```bash
+sudo rm -rf owncloud/
+```
+![imagen40](https://drive.google.com/uc?export=view&id=1U-CWme2jSBcVxCr9hs9c4igTs8FbI9PW)
 
+- Ahora nos salimos del directorio con `cd` y eliminamos el fichero `index.html` con:
+```bash
+sudo rm -rf /var/www/html/index.html
+```
+
+- Ahora aplicamos permisos al directorio `/var/www/html` con los siguientes comandos:
+```bash
+cd /var/www/html
+```
+```bash
+sudo chmod -R 775 .
+```
+![imagen41](https://drive.google.com/uc?export=view&id=1TXKfQM-7FRS7YoGzwNavfX51VhzQ1E2Z)
+```bash
+sudo chown -R usuario:www-data .
+```
+![imagen42](https://drive.google.com/uc?export=view&id=1LPeFLOkPDagZZyZEkxDNQN_oOG7L4bN5)
+
+## 3. ACCEDER AL NAVEGADOR PARA VERIFICAR
+
+Abrimos el navegador y en el buscador ponemos [http://localhost ](http://localhost) 
+![imagen43](https://drive.google.com/uc?export=view&id=1LIHGd0oFHmFxtIxNxSffwrbSj7xTEPOD)
+
+Ahora, si todo ha ido bien tiene que salir la pagina de ownCloud y se iniciaria la configuración.
+
+Para ver la configuración de `ownCloud` dirigete al otro repositorio.
+[Configuración ownCloud](CONFIGURATION.md)
 
 
 
