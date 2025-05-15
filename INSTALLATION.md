@@ -12,11 +12,11 @@ Aquí explico cómo he instalado ownCloud en la máquina virtual de IsardVDI. Pr
 
   ![IsardVDI paso 2](https://drive.google.com/uc?export=view&id=1qsurYbteoabKQyKYN8z4BawRTDTsHP_z)
 
-  - Una vez creada la máquina, en los **3 puntos** nos saldrá el signo de un lápiz, clicamos y nos llevará a la configuración de la máquina.
+- Una vez creada la máquina, en los **3 puntos** nos saldrá el signo de un lápiz, clicamos y nos llevará a la configuración de la máquina.
 
 ![imagen3](https://drive.google.com/uc?id=1xWET3Qgt3ID73I6Bqg_ceoEhSYQL1YCC)
 
--Ahora, en la edición de la máquina virtual, nos dirigimos al apartado hardware y editamos `vCPUS`, `Memoria (GB)` y `Video`.
+- Ahora, en la edición de la máquina virtual, nos dirigimos al apartado hardware y editamos `vCPUS`, `Memoria (GB)` y `Video`.
 
 ![imagen4](https://drive.google.com/uc?id=1YAgJ2-MptMahOuStUtq5pPaaas_XaL6l)
 He puesto 20 GB de memoria. Lo demás lo he dejado predeterminado.
@@ -101,6 +101,72 @@ sudo service apache2 restart
 ```
 ![imagen18](https://drive.google.com/uc?export=view&id=1pljYToFPYHNDvBF2fOcbNP1fdmWfEhz3)
 
+### Ahora estos comandos son para ya poder instalar todo correctamente y llegar a la configuración del ownCloud.
+Como dije anteriormente, la mayoria de comandos tienen que descargar progreso y hay que esperar unos minutos, tambien al ejecutar algunos comandos, se empieza a realizar muchos datos que no caben en la pantalla, esta demostrado en algunas capturas para que lo podais ver.
+
+- Actualizamos la maquina con lo siguiente:
+```bash
+sudo apt update
+```
+![imagen19](https://drive.google.com/uc?export=view&id=1rs9SRdTCtJwA7ZxM9Dn4lPPKwl1noQg9)
+
+```bash
+sudo apt upgrade
+```
+![imagen20](https://drive.google.com/uc?export=view&id=1hkx_clQU9-Zfs7tDgq5asa7kdASHbJSo)
+![imagen21](https://drive.google.com/uc?export=view&id=1bxx6PbdelVlufO0a_rWfruiIYvB1diO7)
+
+
+- Instalamos el servidor web de **Apache2** con el siguiente comando:
+```bash
+sudo apt install -y apache2
+```
+![imagen22](https://drive.google.com/uc?export=view&id=1ahOlteOuUlq5dAnijOlsG2ZeXoLRTj-v)
+
+-Instalamos el servidor de la base de datos con:
+```bash
+sudo apt install -y mysql-server
+```
+![imagen23](https://drive.google.com/uc?export=view&id=1E3iJ2MUCjPYLWJqNiRbo47r3b6-0ooq-)
+![imagen24](https://drive.google.com/uc?export=view&id=1S-BgSbL4bK0PZXc-oUyZDTxqb-I3wL1s)
+
+
+- Ahora con estos 2 comandos, instalaremos algunas librerias `php`, porque las aplicaciones la usan como lenguaje principal.
+```bash
+sudo apt install -y php libapache2-mod-php
+```
+![imagen25](https://drive.google.com/uc?export=view&id=1llf55_BEZKxMmf3nGzrt2edm88nM6Fi4)
+
+```bash
+sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
+```
+![imagen26](https://drive.google.com/uc?export=view&id=105i5KA8EbKnczzslXujzDEitCA2SLM8o)
+
+-Finalmente reiniciamos **Apache2**
+```bash
+sudo systemctl restart apache2
+```
+![imagen27](https://drive.google.com/uc?export=view&id=1D7NoPMbhKYSEU7QAAVBnFM8H3yqYgRN4)
+
+
+### Ahora vamos a configurar el MySQL.
+- Accedemos a la consola de MySQL con:
+```bash
+sudo mysql
+```
+![imagen28](https://drive.google.com/uc?export=view&id=1GJOzKH9wIL3MwXNABDMgu-LeCpld6828)
+
+-Ahora dentro de la consola, creamos la base de datos con:
+```bash
+CREATE DATABASE bbdd;
+```
+![imagen29](https://drive.google.com/uc?export=view&id=1l9jcpKJ0-45mHw3O_gxg2KnFG1gHg1RK)
+
+-Creamos el usuario que se mostrara en ownCloud:
+```console
+CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+Puedes cambiar `usuario` por tu nombre real o tu apodo, pero ten en cuenta que todo lo tendras que poner con el nuevo nombre.
 
 
 
