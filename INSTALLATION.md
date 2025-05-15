@@ -231,6 +231,7 @@ sudo rm -rf owncloud/
 ```bash
 sudo rm -rf /var/www/html/index.html
 ```
+![imagen46](https://drive.google.com/uc?export=view&id=1PmZnFYU_Bkg9ZLR8K0BXRkOrgPprTZbG)
 
 - Ahora aplicamos permisos al directorio `/var/www/html` con los siguientes comandos:
 ```bash
