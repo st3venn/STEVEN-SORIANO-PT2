@@ -179,6 +179,8 @@ GRANT ALL ON bbdd.* to 'usuario'@'localhost';
 ```bash
 exit
 ```
+![imagen44](https://drive.google.com/uc?export=view&id=1Hua14er0XF-9yAY9bT1HJ8qGx83nD1l2)
+
 - Ahora con:
 ```bash
 mysql -u usuario -p
