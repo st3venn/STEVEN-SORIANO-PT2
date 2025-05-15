@@ -1,4 +1,4 @@
-# CREACIÓN MÁQUINA ISARDVDI
+# INSTALACIÓN OWNCLOUD
 
 Aquí explico cómo he instalado ownCloud en la máquina virtual de IsardVDI. Primero he preparado el sistema con Ubuntu, luego he instalado los programas necesarios como Apache, MySQL y PHP. Después he descargado ownCloud y lo he configurado para que funcione bien desde el navegador. Aquí enseño todos los pasos que he seguido.
 
