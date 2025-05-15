@@ -3,8 +3,8 @@ Este es mi repositorio. El contenido que hay aquí trata sobre la instalación y
 
 A continuación, tenéis dos manuales: uno es de la instalación de ownCloud y el siguiente es de la configuración una vez ya instalado:
 
-- **Manual de Instalación** : INSTALLATION.md 
-- **Manual de Configuración**: CONFIGURATION.md
+- [Manual de Instalación](INSTALLATION.md) 
+- [Manual de Configuración](CONFIGURATION.md)
 
 ## Descripción del proyecto
 
