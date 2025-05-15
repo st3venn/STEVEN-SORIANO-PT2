@@ -125,7 +125,7 @@ sudo apt install -y apache2
 ```
 ![imagen22](https://drive.google.com/uc?export=view&id=1ahOlteOuUlq5dAnijOlsG2ZeXoLRTj-v)
 
--Instalamos el servidor de la base de datos con:
+- Instalamos el servidor de la base de datos con:
 ```bash
 sudo apt install -y mysql-server
 ```
@@ -144,7 +144,7 @@ sudo apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd p
 ```
 ![imagen26](https://drive.google.com/uc?export=view&id=105i5KA8EbKnczzslXujzDEitCA2SLM8o)
 
--Finalmente reiniciamos **Apache2**
+- Finalmente reiniciamos **Apache2**
 ```bash
 sudo systemctl restart apache2
 ```
@@ -158,14 +158,14 @@ sudo mysql
 ```
 ![imagen28](https://drive.google.com/uc?export=view&id=1GJOzKH9wIL3MwXNABDMgu-LeCpld6828)
 
--Ahora dentro de la consola, creamos la base de datos con:
+- Ahora dentro de la consola, creamos la base de datos con:
 ```bash
 CREATE DATABASE bbdd;
 ```
 ![imagen29](https://drive.google.com/uc?export=view&id=1l9jcpKJ0-45mHw3O_gxg2KnFG1gHg1RK)
 
--Creamos el usuario que se mostrara en ownCloud y le damos privilegios:
-```console
+- Creamos el usuario que se mostrara en ownCloud y le damos privilegios:
+```bash
 CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 Puedes cambiar `usuario` por tu nombre real o tu apodo, pero ten en cuenta que todo lo tendras que poner con el nuevo nombre.
@@ -200,7 +200,7 @@ cd /var/www/html
 ![imagen35](https://drive.google.com/uc?export=view&id=1kmDXqZR0M6OLyEsxvjGHW3hlmVhJQgMl)
 
 - Una vez dentro del directorio `/var/www/html` descomprimimos el fichero con el siguiente comando:
-```console
+```bash
 sudo unzip app-web.zip
 ```
 ![imagen36](https://drive.google.com/uc?export=view&id=1gkTt7NJhjRIzD9T0bwCIitvBNQqMehiX)
