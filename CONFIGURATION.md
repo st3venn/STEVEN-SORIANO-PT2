@@ -224,6 +224,11 @@ sudo systemctl restart apache2
 ```
 ![image](https://github.com/user-attachments/assets/c8394e06-9e4f-4171-a1b2-0e4ed8608741)
 
+- Y ahora entramos a la configuración de `apache 2`con:
+```bash
+sudo nano /var/www/html/config/config.php
+```
+
 - En el apartado de `trusted_domains`, tiene que salir `0=> 'localhost'`, debajo de ello, pondremos `1=> '192.168.0.0'` según la **IP** que te haya tocado.
 ![image](https://github.com/user-attachments/assets/95506e31-2df2-40fc-80a7-668afbe5d8bf)
 
