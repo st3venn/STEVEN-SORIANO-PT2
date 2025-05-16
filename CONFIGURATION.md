@@ -13,7 +13,7 @@ En cada casilla, tienes que poner lo siguiente:
 | usuario  | password | /var/www/html/data  | usuario        | password           | bbdd           | localhost      |
 
 Recuerda que si has cambiado `usuario` y `password` tienes que poner los datos que has cambiado.
-
+## 
 - Ahora iniciamos sessión:
 ![imagen47](https://drive.google.com/uc?export=view&id=1gxQ6VLDJ4a8PZTb0uFyOP_Td4K4ziBtQ)
 
@@ -28,14 +28,16 @@ Recuerda que si has cambiado `usuario` y `password` tienes que poner los datos q
 
 ![imagen50](https://drive.google.com/uc?export=view&id=1vqOH5j-JN4CfaPuoduNBasg75aaDYkdh)
 
+## 
 - Nos dirigimos a `Add group` y creamos 3 grupos: `admin`,`editor` y `visualizador`. `admin` ya esta creado por defecto.
 ![imagen50](https://drive.google.com/uc?export=view&id=1vqOH5j-JN4CfaPuoduNBasg75aaDYkdh)
 
 ![imagen51](https://drive.google.com/uc?export=view&id=1urJLrlduojlWq9YcCz5RyIzY1pqmAij-)
 
 ![imagen52](https://drive.google.com/uc?export=view&id=1IizlpPdmjiicroVBaGjwTAvnRR5Kt_CX)
+##
 
-- Creamos un minimo de 3 usuarios, con su correo electronico y al gurpo donde quieres que pertenezca cada usuario. Una vez creado el usuario hacemos clic en `Create`.
+- Creamos un minimo de 3 usuarios, con su correo electronico y al grupo donde quieres que pertenezca cada usuario. Una vez creado el usuario hacemos clic en `Create`.
    En mi caso he creado a:
   
 | **Usuario ya viene predeterminado**                              |
@@ -52,28 +54,41 @@ Recuerda que si has cambiado `usuario` y `password` tienes que poner los datos q
 ![imagen54](https://drive.google.com/uc?export=view&id=1o_s2cW81bECxsgpLI7e4FseMxv3V0Scc)
 
 ![imagen55](https://drive.google.com/uc?export=view&id=1AjKVZ1NMxHLzbLQ4KKQgrKlx7Rj9LYj1)
+## 
 
 - Una vez creado, quedaria tal que asi:
 ![imagen56](https://drive.google.com/uc?export=view&id=1b7_9HasgBXdcBKVA7837W9-Kzj8vBKbO)
+## 
 
 ## 3. ASSIGNACIÓN DE PERMISOS
 
 - Hacemos clic en las 3 rayas del lateral izquierdo y nos vamos a `Files`, luego en el signo `+` creamos una nueva carpeta que se llame `permisos`
 ![imagen57](https://drive.google.com/uc?export=view&id=1SMGMSYaHFCxzzX2Uv-gxF6h3hK7tDMJv)
+## 
 
 - Vamos a la carpeta que hemos creado y luego a `sharing`
 ![imagen58](https://drive.google.com/uc?export=view&id=1w12-yap9iVcf9RpWCcnwRex5gfjbXIrL)
+## 
 
 - En `Sharing`, en el apartado `User and Groups` añadimos a los usuarios que hemos creado. En cada usuario nos vamos al signo de `ajustes` y le establemos los permisos a cada grupo.
 ![imagen59](https://drive.google.com/uc?export=view&id=1w12-yap9iVcf9RpWCcnwRex5gfjbXIrL)
+## 
 
 - Yo, he añadido a cada grupo los siguientes permisos:
 
-| Grupo          | Permisos                              |
+| Grupo          | Permisos                              | 
 |--------------|-------------------------------------|
 | Admin        | can share, can edit, create, change, delete |
 | Editor       | can edit, create, delete             |
 | Visualizador | ningún permiso                       |
+
+| ㅤㅤ       | ㅤㅤ           |
+|--------------|-------------------|
+| can share    | puede compartir   |
+| can edit     | puede editar      |
+| create       | crear             |
+| change       | cambiar           |
+| delete       | eliminar          |
 
 ![imagen60](https://drive.google.com/uc?export=view&id=1PkXSXEikeWB4Zq6KnnBG82mgNt9c7tWe)
 
