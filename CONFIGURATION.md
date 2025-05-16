@@ -1,4 +1,4 @@
-## CONFIGURACIÓN CLOUD
+# CONFIGURACIÓN CLOUD
 
 Aqui, explicaré detalladamente la configuración de ownCloud una vez ya echa la instalación en la maquina virtual IsardVDI, como crear usuarios, asignando roles y permisos a cada uno de ellos y como administrar los archivos.
 
