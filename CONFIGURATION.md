@@ -210,10 +210,27 @@ Vemos la IP de la red.
 - Luego desde la maquina local, volvemos a realizar el mismo comando para ver si esta la misma `IP que la maquina virtual`. Como no salia la misma `dirección IP` comprobamos hacer ping con la `IP` de la maquina virtual.
 ![imagen 98](https://drive.google.com/uc?export=view&id=1bYFBJwQlU8Mvmfgn6kqdVt2g3u8Rk3Ow)
 
-- Como el ping si funciona, abrimos el archivo donde esta la configuración y los dominios. En el apartado de `trusted_domains`, tiene que salir `0=> 'localhost'`, debajo de ello, pondremos `1=> '192.168.0.0'` según la **IP** que te haya tocado. En mi caso puse `1=>'192.168.236.251'`.
+- Como el ping si funciona, abrimos el archivo donde esta la configuración.
+  
+- Primero entramos al directorio `/var/www/html`.
+```bash
+cd /var/www/html
+```
+![image](https://github.com/user-attachments/assets/26ea6265-bd2b-4f5f-ae24-acc91ceedbb2)
+
+- Una vez en el directorio, verificamos si `apache 2` esta activo con el comando:
+```bash
+sudo systemctl restart apache2
+```
+![image](https://github.com/user-attachments/assets/c8394e06-9e4f-4171-a1b2-0e4ed8608741)
+
+- En el apartado de `trusted_domains`, tiene que salir `0=> 'localhost'`, debajo de ello, pondremos `1=> '192.168.0.0'` según la **IP** que te haya tocado.
+![image](https://github.com/user-attachments/assets/95506e31-2df2-40fc-80a7-668afbe5d8bf)
+
+- En mi caso puse `1=>'192.168.236.151'`.
 ![imagen 99](https://drive.google.com/uc?export=view&id=1E3JRZUA728yaqHs2hVPSxqXNyQzTWOKz)
 
-- Una vez echo lo anterior, nos dirigmos al navegador de la maquina local y ponemos `http://192.168.0.0`.
+- Una vez echo lo anterior, nos dirigmos al navegador de la maquina local y ponemos `http://192.168.236.151`.
 ![imagen 100](https://drive.google.com/uc?export=view&id=1vai_wuzXnG_e5aXgOn12_6_2L6JIQar-)
 
 Y finalmente puedes acceder a ownCloud desde la maquina local.
