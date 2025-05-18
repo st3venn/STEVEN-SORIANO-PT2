@@ -58,7 +58,7 @@ LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php -y
 ```bash
 sudo apt update
 ```
-![imagen10](https://drive.google.com/uc?export=view&id=1FH4W2o2ZArgnKFRc4Q8dYCKGHksjoKVd)
+![image](https://github.com/user-attachments/assets/2d162a27-1844-455f-bb09-725b7664a459)
 
 - Instalamos las librerías PHP con los siguientes comandos: 
 ```bash
@@ -195,7 +195,7 @@ sudo cp ~/Descargas/app-web.zip /var/www/html
 ![imagen33](https://drive.google.com/uc?export=view&id=1PmZnFYU_Bkg9ZLR8K0BXRkOrgPprTZbG)
 En mi caso, como tengo el sistema en Español, pongo `Descargas`, que es donde tengo guardado el fichero, si has cambiado el nombre del fichero tambien lo deberias cambiar en este comando.
 
-- Nos dirigmos al directorio `/ver/www/html` con:
+- Nos dirigmos al directorio `/var/www/html` con:
 ```bash
 cd /var/www/html
 ```
@@ -215,7 +215,7 @@ ls /var/www/html
 Podemos mirar que nombre se ha puesto despues de descomprimir el fichero.
 ![imagen38](https://drive.google.com/uc?export=view&id=111B4aNXrSDIUp5v7q5ys34vR1a1gDs1u)
 
-- Una vez mirado el nuevo nombre (en mi caso **owncloud**), podemos copiar todos los fichero al directorio `/var/www/html` con:
+- Una vez mirado el nuevo nombre (en mi caso **owncloud**), podemos copiar todos los ficheros al directorio `/var/www/html` con:
 ```bash
 sudo cp -R owncloud/. /var/www/html
 ```
@@ -231,7 +231,7 @@ sudo rm -rf owncloud/
 ```bash
 sudo rm -rf /var/www/html/index.html
 ```
-![imagen46](https://drive.google.com/uc?export=view&id=1PmZnFYU_Bkg9ZLR8K0BXRkOrgPprTZbG)
+![image](https://github.com/user-attachments/assets/b5173746-4e58-4844-806e-84680ace0c21)
 
 - Ahora aplicamos permisos al directorio `/var/www/html` con los siguientes comandos:
 ```bash
